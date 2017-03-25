@@ -1,0 +1,387 @@
+/* line 1, ../sass/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../sass/main.scss */
+body {
+  background: #4b4247;
+}
+
+/* line 10, ../sass/main.scss */
+.container {
+  width: 570px;
+  height: 840px;
+  margin: 30px auto;
+  background: #595055;
+  overflow: hidden;
+  z-index: -5;
+  box-shadow: 0 0 25px #2b2628;
+  position: relative;
+}
+
+/* line 21, ../sass/main.scss */
+.moon {
+  width: 100px;
+  height: 100px;
+  background: #fff8d7;
+  border-radius: 50%;
+  margin: 40px 0 80px 80px;
+  box-shadow: 0 0 70px 70px rgba(255, 248, 216, 0.2);
+}
+
+/* line 31, ../sass/main.scss */
+.clouds {
+  opacity: 0.6;
+}
+
+/* line 35, ../sass/main.scss */
+.cloud, .cloud::after, .cloud:before {
+  border-radius: 35px;
+  background: #918584;
+}
+
+/* line 40, ../sass/main.scss */
+.cloud {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  border-radius: 50px 35px 35px 15px;
+  display: inline-block;
+  animation: float 50s linear infinite backwards;
+}
+
+/* line 49, ../sass/main.scss */
+.cloud::after, .cloud:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  display: block;
+}
+
+/* line 56, ../sass/main.scss */
+.cloud::before {
+  width: 40px;
+  height: 50px;
+  right: 16px;
+  bottom: 0;
+}
+
+/* line 63, ../sass/main.scss */
+.cloud::after {
+  width: 40px;
+  height: 45px;
+  left: 12px;
+  bottom: 0;
+}
+
+/* line 70, ../sass/main.scss */
+.cloud:nth-child(1) {
+  position: absolute;
+  top: 220px;
+  left: -450px;
+}
+
+/* line 76, ../sass/main.scss */
+.cloud:nth-child(2) {
+  position: absolute;
+  top: 140px;
+  left: -230px;
+}
+
+/* line 82, ../sass/main.scss */
+.cloud:nth-child(4) {
+  position: absolute;
+  top: 120px;
+  left: 230px;
+}
+
+/* line 88, ../sass/main.scss */
+.cloud:nth-child(5) {
+  position: absolute;
+  top: 180px;
+  right: 100px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-450px);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
+/* line 100, ../sass/main.scss */
+.stars {
+  width: 100%;
+}
+
+/* line 104, ../sass/main.scss */
+.star {
+  display: inline-block;
+  animation: twinkle 7s -1s infinite;
+}
+
+/* line 109, ../sass/main.scss */
+.star:nth-child(even) {
+  animation: twinkle 7s 2s infinite;
+}
+
+/* line 113, ../sass/main.scss */
+.star::after, .star::before {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 10px;
+  background: #b0a69b;
+}
+
+/* line 121, ../sass/main.scss */
+.star::after {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+}
+
+/* line 127, ../sass/main.scss */
+.star::before {
+  transform: rotate(-45deg);
+}
+
+/* line 131, ../sass/main.scss */
+.star:nth-child(1) {
+  transform: translate(60px, -210px);
+}
+
+/* line 135, ../sass/main.scss */
+.star:nth-child(2) {
+  transform: translate(180px, -110px);
+}
+
+/* line 139, ../sass/main.scss */
+.star:nth-child(3) {
+  transform: translate(210px, -215px);
+}
+
+/* line 143, ../sass/main.scss */
+.star:nth-child(4) {
+  transform: translate(370px, -15px);
+}
+
+/* line 147, ../sass/main.scss */
+.star:nth-child(5) {
+  transform: translate(440px, 50px);
+}
+
+/* line 151, ../sass/main.scss */
+.star:nth-child(6) {
+  transform: translate(440px, -190px);
+}
+
+/* line 155, ../sass/main.scss */
+.star:nth-child(7) {
+  transform: translate(-5px, 20px);
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.2;
+  }
+}
+/* line 169, ../sass/main.scss */
+.mountain {
+  width: 490px;
+  height: 490px;
+  margin: 10px auto 0;
+  background: linear-gradient(-225deg, #796f74, #534a4f 50%, #4a4246 50%);
+  transform: rotate(-45deg);
+  border-radius: 60px;
+  z-index: -2;
+  position: relative;
+}
+
+/* line 181, ../sass/main.scss */
+.train-container {
+  position: absolute;
+  bottom: -80px;
+}
+
+/* line 186, ../sass/main.scss */
+.train {
+  display: flex;
+  animation: move 8s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(-1450px);
+  }
+}
+/* line 196, ../sass/main.scss */
+.train-car {
+  display: inline-block;
+  width: 240px;
+  border: 1px solid #71656a;
+  border-top: 2px solid #978a8e;
+  background: #50464b;
+  border-radius: 11px;
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+/* line 207, ../sass/main.scss */
+.head-car, .end-car {
+  width: 210px;
+  border-left: 2px solid #978a8e;
+  border-top-left-radius: 200px;
+  padding-left: 25px;
+}
+
+/* line 214, ../sass/main.scss */
+.end-car {
+  border-top-left-radius: 11px;
+  border-top-right-radius: 200px;
+  padding-left: 10px;
+  padding-right: 25px;
+}
+
+/* line 221, ../sass/main.scss */
+.windows, .door {
+  display: inline-block;
+}
+
+/* line 225, ../sass/main.scss */
+.windows {
+  width: 80px;
+  height: 50px;
+  margin-left: 5px;
+}
+
+/* line 231, ../sass/main.scss */
+.head-car .windows,
+.end-car .windows {
+  width: 147px;
+}
+
+/* line 236, ../sass/main.scss */
+.head-car .windows {
+  margin-left: 0;
+}
+
+/* line 241, ../sass/main.scss */
+.end-car .door {
+  margin-left: 10px;
+}
+/* line 244, ../sass/main.scss */
+.end-car .windows {
+  margin-left: 10px;
+}
+
+/* line 249, ../sass/main.scss */
+.head-window, .end-window, .w-left, .w-right {
+  background: #ffc72f;
+  border-radius: 2px;
+  width: 37px;
+  height: 26px;
+  display: inline-block;
+}
+
+/* line 257, ../sass/main.scss */
+.head-window, .end-window {
+  width: 35px;
+}
+
+/* line 261, ../sass/main.scss */
+.head-window {
+  border-top-left-radius: 25px;
+  margin-right: 19px;
+}
+
+/* line 266, ../sass/main.scss */
+.end-window {
+  border-top-right-radius: 25px;
+  margin-left: 15px;
+}
+
+/* line 271, ../sass/main.scss */
+.door {
+  background: #675e62;
+  width: 22px;
+  height: 50px;
+  padding: 4px 5px 0 4px;
+  vertical-align: top;
+  margin: 0 5px 0 6px;
+}
+
+/* line 280, ../sass/main.scss */
+.door:before {
+  content: '';
+  width: 15px;
+  height: 20px;
+  background: #53494f;
+  display: block;
+  position: relative;
+  top: 2px;
+  left: 4px;
+}
+
+/* line 291, ../sass/main.scss */
+.track {
+  position: relative;
+  background: #43383e;
+  width: 100%;
+  height: 450px;
+}
+
+/* line 298, ../sass/main.scss */
+.ledge {
+  height: 20px;
+  width: 100%;
+  border-bottom: 3px solid #392e34;
+  margin-bottom: 40px;
+}
+
+/* line 305, ../sass/main.scss */
+.pillars {
+  overflow-x: hidden;
+}
+
+/* line 309, ../sass/main.scss */
+.pillars > div {
+  display: inline-block;
+  background: #534a4f;
+  height: 386px;
+  border-radius: 200px 200px 0 0;
+}
+
+/* line 316, ../sass/main.scss */
+.right-pillar,
+.middle-pillar {
+  border-right: 5px solid #968b8e;
+}
+
+/* line 321, ../sass/main.scss */
+.left-pillar {
+  width: 120px;
+  margin-left: -60px;
+  margin-right: 50px;
+}
+
+/* line 327, ../sass/main.scss */
+.middle-pillar {
+  width: 160px;
+  margin-right: 80px;
+}
+
+/* line 332, ../sass/main.scss */
+.right-pillar {
+  width: 180px;
+  border-right-width: 8px;
+}
